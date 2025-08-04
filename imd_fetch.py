@@ -8,6 +8,16 @@ from datetime import datetime
 import getpass
 import socket
 
+# --- CONFIGURATION ---
+JSON_URL = "https://city.imd.gov.in/api/aws_data_api_norteast.php"
+DB_CONFIG = {
+    "host": "localhost",
+    "port": 5432,
+    "dbname": "practice",
+    "user": "postgres",
+    "password": "12345"
+}
+TABLE_NAME = "IMD_data"
 
 # --- FETCH JSON ---
 response = requests.get(JSON_URL)
